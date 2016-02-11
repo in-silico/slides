@@ -1,22 +1,22 @@
 {
-  "name": "clasificatorio",
+  "name": "slides",
   "version": "1.0.0",
-  "description": "Clasificatorio utp",
-  "main": "app.js",
+  "description": "Slides In-silico",
+  "main": "index.html",
   "scripts": {
     "start": "http-server ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/in-silico/clasificatorio.git"
+    "url": "git+https://github.com/in-silico/slides.git"
   },
-  "author": "Manuel Pineda <manuel.felipe.pineda@gmail.com> (http://github.com/pin3da)",
+  "author": "In-silico UTP",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/in-silico/clasificatorio/issues"
+    "url": "https://github.com/in-silico/slides/issues"
   },
-  "homepage": "https://github.com/in-silico/clasificatorio#readme",
+  "homepage": "https://github.com/in-silico/slides#readme",
   "dependencies": {
     "http-server": "^0.8.5"
   }
