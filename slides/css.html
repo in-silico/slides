@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS - In-silico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# CSS
+  <br /><br /><br />
+  <img src="../img/logo.png" width="20%"></img>
+  <br />
+By *In-silico*
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+# Problem :
+
+## How to write code collaboratively?
+
+--
+
+#### Bad Ideas (before):
+
+- Meetings.
+- Send your code (emails, usb, etc).
+- Wait for others finish their work.
+
+#### Disadvantages:
+
+- synchronous development.
+- error prone.
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+
+## How to manage my proyects ?
+
+For example, adding a new functionality to an stable project.
+
+--
+
+#### Bad Ideas (before):
+
+- Make a copy of the proyect identified by date.
+
+#### Disadvantages :
+
+- You can have 'versions' far apart and lose a lot of work.
+- It occupies much space (and time).
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+# Solution :
+
+### Version control system.
+
+
+Is any kind of practice that tracks and provides control over changes to source code.
+
+Some sort of mark is usually used to return to previous states.
+
+#### Advantages
+
+- Parallel task realization.
+- Asynchronous work.
+
+#### Examples:
+
+- Subversion : Centralized.
+- Git        : Distributed.
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+# Git : "cool kids" version control system.
+
+- Distributed.
+- Open Source.
+- Easy to use.
+- Handles large porjects.
+- Efficient and fast.
+- Represents the project as a DAG based on commits.
+
+![Work flow and marks](./images/git1.png)
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+# Who uses Git ?
+
+--
+#### Linux Kernel.
+
+--
+
+#### Android.
+
+--
+
+#### Ruby on Rails.
+
+--
+
+## PereiraJS !!
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+# Basic commands : First git repository.
+
+```bash
+$ git init
+$ vim test.html
+$ git status
+$ git add test.html
+$ git status
+$ git commit -m "Inital commit"
+$ git log
+```
+
+Adding something :
+
+```bash
+$ vim test.html
+$ git add test.html
+$ git commit -m "Second commit"
+```
+
+
+Fixing the bug:
+
+```bash
+$ git log
+$ git reset <####>
+```
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+# Config your git.
+
+```bash
+git config --global user.name "Manuel Pineda"
+git config --global user.email "manuel.felipe.pineda@gmail.com"
+```
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+# Github : Social Coding.
+
+*Where software is built*
+
+GitHub is a collaboration platform built on top of a distributed version control system called Git.
+
+<img src="./images/labtocat.png" width="50%">
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+## Caracteristics:
+
+- #### Designed to contribute.
+
+  - Hierarchical structure review
+
+![github rules](./images/git2.png)
+
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+## Caracteristics:
+
+- #### Designed to contribute.
+
+  - Code construction based on proposals (pull request)
+  - Git notes.
+  - Task management.
+  - Issue tracking.
+
+  - Wiki.
+  - Free for open source.
+  - The largest host of source code in the world.
+  - GitHub reports having over 11 million users and over 29.4 million repositories.
+  - Web editor
+
+
+* https://github.com/about/press
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+## Big communities in github:
+
+- NodeJS.
+- ZeroMQ.
+- Express.
+- PereiraJS.
+
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+# Example : Make a pull request for PereiraJS.
+
+
+<img src="./images/daftpunktocat-thomas.gif" width="40%">
+<img src="./images/daftpunktocat-guy.gif" width="40%">
+
+- Create an issue.
+- Create a branch.
+- Create a PR.
+- Merge.
+
+
+    </textarea>
+    <script src="//gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
