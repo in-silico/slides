@@ -31,206 +31,190 @@ By *In-silico*
 ---
 <img src="../img/logo.png" width="15%" align=right></img>
 <br />
-# Problem :
 
-## How to write code collaboratively?
+# What is CSS?
+
+* **C**ascading **S**tyle **S**heets
+* CSS describes how HTML elements are to be displayed
 
 --
 
-#### Bad Ideas (before):
+# Why Use CSS?
 
-- Meetings.
-- Send your code (emails, usb, etc).
-- Wait for others finish their work.
-
-#### Disadvantages:
-
-- synchronous development.
-- error prone.
+CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
 
 ---
 <img src="../img/logo.png" width="15%" align=right></img>
 <br />
 
-## How to manage my proyects ?
+## CSS Solved a Big Problem
 
-For example, adding a new functionality to an stable project.
+HTML was NEVER intended to contain tags for formatting a web page!
+HTML was created to describe the content of a web page.
+
+CSS removed the style formatting from the HTML page!
 
 --
 
-#### Bad Ideas (before):
+## CSS Saves a Lot of Work!
 
-- Make a copy of the proyect identified by date.
+The style definitions are normally saved in external .css files.
 
-#### Disadvantages :
+With an external stylesheet file, you can change the look of an entire website by changing just one file!
 
-- You can have 'versions' far apart and lose a lot of work.
-- It occupies much space (and time).
 
 ---
 <img src="../img/logo.png" width="15%" align=right></img>
 <br />
-# Solution :
+## Three Ways to Insert CSS
 
-### Version control system.
+* With an external style sheet, you can change the look of an entire website by changing just one file
+```html
+<head>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+```
+* An internal style sheet may be used if one single page has a unique style.
+```html
+<head>
+  <style>
+    body {
+       background-color: black;
+    }
 
-
-Is any kind of practice that tracks and provides control over changes to source code.
-
-Some sort of mark is usually used to return to previous states.
-
-#### Advantages
-
-- Parallel task realization.
-- Asynchronous work.
-
-#### Examples:
-
-- Subversion : Centralized.
-- Git        : Distributed.
-
----
-<img src="../img/logo.png" width="15%" align=right></img>
-<br />
-# Git : "cool kids" version control system.
-
-- Distributed.
-- Open Source.
-- Easy to use.
-- Handles large porjects.
-- Efficient and fast.
-- Represents the project as a DAG based on commits.
-
-![Work flow and marks](./images/git1.png)
-
----
-<img src="../img/logo.png" width="15%" align=right></img>
-<br />
-# Who uses Git ?
-
---
-#### Linux Kernel.
-
---
-
-#### Android.
-
---
-
-#### Ruby on Rails.
-
---
-
-## PereiraJS !!
-
----
-<img src="../img/logo.png" width="15%" align=right></img>
-<br />
-# Basic commands : First git repository.
-
-```bash
-$ git init
-$ vim test.html
-$ git status
-$ git add test.html
-$ git status
-$ git commit -m "Inital commit"
-$ git log
+    h1 {
+       color: maroon;
+    }
+  </style>
+</head>
 ```
 
-Adding something :
+---
 
-```bash
-$ vim test.html
-$ git add test.html
-$ git commit -m "Second commit"
+<img src="../img/logo.png" width="15%" align=right></img>
+<br /><br /><br /><br /><br /><br /><br />
+* An inline style may be used to apply a unique style for a single element.
+
+```css
+<h1 style="color:blue;margin-left:30px;">This is a heading.</h1>
 ```
+--
 
+## Cascading Order
 
-Fixing the bug:
+* Inline style (inside an HTML element)
+* External and internal style sheets (in the head section)
+* Browser default
 
-```bash
-$ git log
-$ git reset <####>
+---
+<img src="../img/logo.png" width="15%" align=right></img>
+<br />
+# CSS Syntax
+
+![CSS syntax](../img/selector.gif)
+
+* The selector points to the HTML element you want to style.
+* The declaration block contains one or more declarations separated by semicolons.
+* Each declaration includes a CSS property name and a value, separated by a colon.
+* A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces.
+
+--
+
+```css
+h1 {
+  color: blue;
+  font-size: 12px;
+}
 ```
 
 ---
 <img src="../img/logo.png" width="15%" align=right></img>
 <br />
-# Config your git.
+# CSS Selectors
 
-```bash
-git config --global user.name "Manuel Pineda"
-git config --global user.email "manuel.felipe.pineda@gmail.com"
+* The *element selector* selects elements based on the element name.
+
+```css
+p {
+    text-align: center;
+    color: red;
+}
+```
+
+* The *id selector* uses the id attribute of an HTML element to select a specific element.
+
+```css
+#id1 {
+    text-align: center;
+    color: red;
+}
 ```
 
 ---
 <img src="../img/logo.png" width="15%" align=right></img>
 <br />
-# Github : Social Coding.
 
-*Where software is built*
+* The class selector selects elements with a specific class attribute.
 
-GitHub is a collaboration platform built on top of a distributed version control system called Git.
+```css
+.center {
+    text-align: center;
+    color: red;
+}
+```
 
-<img src="./images/labtocat.png" width="50%">
+## Grouping Selectors
 
+If you have elements with the same style definitions, like this:
+
+```css
+h1, h2, p {
+    text-align: center;
+    color: red;
+}
+```
 ---
 <img src="../img/logo.png" width="15%" align=right></img>
 <br />
-## Caracteristics:
 
-- #### Designed to contribute.
+# CSS colors
 
-  - Hierarchical structure review
+Colors in CSS are most often specified by:
 
-![github rules](./images/git2.png)
+* a valid color name - like "red"
+* an RGB value - like "rgb(255, 0, 0)"
+* a HEX value - like "#ff0000"
 
+# CSS Backgrounds
 
+* background-color
+
+```css
+body {
+    background-color: lightblue;
+}
+```
 ---
 <img src="../img/logo.png" width="15%" align=right></img>
 <br />
-## Caracteristics:
-
-- #### Designed to contribute.
-
-  - Code construction based on proposals (pull request)
-  - Git notes.
-  - Task management.
-  - Issue tracking.
-
-  - Wiki.
-  - Free for open source.
-  - The largest host of source code in the world.
-  - GitHub reports having over 11 million users and over 29.4 million repositories.
-  - Web editor
 
 
-* https://github.com/about/press
+* background-image
+
+```css
+body {
+    background-image: url("paper.gif");
+}
+```
 
 ---
+
 <img src="../img/logo.png" width="15%" align=right></img>
 <br />
-## Big communities in github:
+# References
 
-- NodeJS.
-- ZeroMQ.
-- Express.
-- PereiraJS.
+* *http://www.w3schools.com/css/*
 
----
-<img src="../img/logo.png" width="15%" align=right></img>
-<br />
-# Example : Make a pull request for PereiraJS.
-
-
-<img src="./images/daftpunktocat-thomas.gif" width="40%">
-<img src="./images/daftpunktocat-guy.gif" width="40%">
-
-- Create an issue.
-- Create a branch.
-- Create a PR.
-- Merge.
 
 
     </textarea>
