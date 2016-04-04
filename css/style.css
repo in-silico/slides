@@ -3,6 +3,16 @@
  * Made By MaterializeCSS.com
  */
 
+ body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+  }
+
+main {
+ flex: 1 0 auto;
+}
+
 td, th {
   padding: 6px 8px;
 }
@@ -24,9 +34,3 @@ a {
 .light a {
   color : black;
 }
-/*
-.page-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}*/
